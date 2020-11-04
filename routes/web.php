@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 Route::resource('comics', 'ComicController');
+Route::resource('authors', 'AuthorController');
