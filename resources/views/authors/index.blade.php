@@ -9,13 +9,15 @@
   <body>
 
     <h1>Lista autori</h1>
-    
+
     <table>
       <thead>
         <tr>
           <th>ID</th>
           <th>NOME</th>
           <th>COGNOME</th>
+          <th>NAZIONALITA</th>
+          <th>IMMAGINE</th>
           <th>AZIONI</th>
         </tr>
       </thead>
@@ -25,6 +27,10 @@
             <td>{{$author->id}}</td>
             <td>{{$author->name}}</td>
             <td>{{$author->surname}}</td>
+            <td>{{$author->info->nationality}}</td>
+            <td>
+              <img src="{{$author->info->image}}" alt="{{$author->name}}">
+            </td>
             <td>
               <a href="#">Pulsante vuoto</a>
             </td>
