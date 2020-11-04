@@ -17,6 +17,7 @@
           <th>NOME</th>
           <th>COGNOME</th>
           <th>NAZIONALITA</th>
+          <th>OPERE</th>
           <th>IMMAGINE</th>
           <th>AZIONI</th>
         </tr>
@@ -28,6 +29,13 @@
             <td>{{$author->name}}</td>
             <td>{{$author->surname}}</td>
             <td>{{$author->info->nationality}}</td>
+            <td>
+              <ul>
+                @foreach ($author->comics as $comic)
+                  <li>{{$comic->title}}</li>
+                @endforeach
+              </ul>
+            </td>
             <td>
               <img src="{{$author->info->image}}" alt="{{$author->name}}">
             </td>
